@@ -1,0 +1,36 @@
+INFO  2022-13-13 23:13:26[main] [Log4j2Application:55] - Starting Log4j2Application using Java 1.8.0_322 on DESKTOP-VC4RUJ3 with PID 15492 (C:\Users\User\Desktop\Coding\etc\log4j2\build\classes\java\main started by User in C:\Users\User\Desktop\Coding\etc\log4j2)
+INFO  2022-13-13 23:13:26[main] [Log4j2Application:640] - The following 1 profile is active: "local"
+INFO  2022-13-13 23:13:26[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-13-13 23:13:26[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+INFO  2022-13-13 23:13:27[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-13-13 23:13:27[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 784 ms
+INFO  2022-13-13 23:13:27[main] [H2ConsoleAutoConfiguration:87] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test2'
+INFO  2022-13-13 23:13:27[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-13-13 23:13:27[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.9.Final
+INFO  2022-13-13 23:13:27[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-13-13 23:13:27[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  2022-13-13 23:13:28[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-13-13 23:13:28[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-13-13 23:13:28[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-13-13 23:13:28[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-13-13 23:13:28[main] [Log4j2Application:61] - Started Log4j2Application in 2.307 seconds (JVM running for 2.886)
+INFO  2022-14-13 23:14:26[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-14-13 23:14:26[SpringApplicationShutdownHook] [SchemaDropperImpl$DelayedDropActionImpl:538] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  2022-14-13 23:14:29[main] [Log4j2Application:55] - Starting Log4j2Application using Java 1.8.0_322 on DESKTOP-VC4RUJ3 with PID 5096 (C:\Users\User\Desktop\Coding\etc\log4j2\build\classes\java\main started by User in C:\Users\User\Desktop\Coding\etc\log4j2)
+INFO  2022-14-13 23:14:29[main] [Log4j2Application:640] - The following 1 profile is active: "local"
+INFO  2022-14-13 23:14:30[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-14-13 23:14:30[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+INFO  2022-14-13 23:14:30[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-14-13 23:14:30[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 783 ms
+INFO  2022-14-13 23:14:30[main] [H2ConsoleAutoConfiguration:87] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test2'
+INFO  2022-14-13 23:14:30[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-14-13 23:14:30[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.9.Final
+INFO  2022-14-13 23:14:31[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-14-13 23:14:31[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  2022-14-13 23:14:31[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-14-13 23:14:31[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-14-13 23:14:31[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-14-13 23:14:31[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-14-13 23:14:31[main] [Log4j2Application:61] - Started Log4j2Application in 2.29 seconds (JVM running for 2.874)
+INFO  2022-33-13 23:33:53[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-33-13 23:33:53[SpringApplicationShutdownHook] [SchemaDropperImpl$DelayedDropActionImpl:538] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'

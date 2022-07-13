@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration scan="true" scanPeriod="60 seconds">
+
+    <Properties>
+        <Property name="LOG_PATTERN" value="%-5level %d{yyyy-mm-dd HH:mm:ss}[%thread] [%logger{0}:%line] - %msg%n"/>
+
+        <springprofile name="local">
+            <Property name="logPath">./logs/local</Property>
+            <Property name="filename">local_log</Property>
+        </springprofile>
+
+    </Properties>
+
+
+    <Appenders>
+
+        <!-- CONSOLE Appender -->
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <!-- CONSOLE 출력 패턴 -->
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+
+        <!-- log 파일을 저장하는 위치와 정책 -->
+        <RollingFile name="SaveFile">
+            <!-- 로그 파일 생성 시 이름 -->
+            <FileName>${logPath}/${filename}.log</FileName>
+            <!-- 로그 파일이 날짜나 용량으로 인해 다음 파일로 넘어갈 시 이전 파일 이름 -->
+            <FilePattern>${logPath}/${filename}.%d{yyyy-MM-dd}_%i.log</FilePattern>
+
+            <!-- 파일 로그 출력 패턴 -->
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+
+            <Policies>
+                <!-- 하루 지나면 롤업 -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <!-- 롤업 용량 기준 -->
+                <SizeBasedTriggeringPolicy Size="3MB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="7" fileIndex="max" >
+                <Delete basePath = "logs" maxDepth = "1">
+                    <!-- 3일이 경과한 로그파일은 자동 삭제 -->
+                    <IfLastModified age = "3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+
+        </RollingFile>
+
+        <!-- log 파일을 저장하는 위치와 정책 -->
+        <RollingFile name="SaveErr">
+            <!-- 로그 파일 생성 시 이름 -->
+            <FileName>${logPath}/${filename}.err.log</FileName>
+            <!-- 로그 파일이 날짜나 용량으로 인해 다음 파일로 넘어갈 시 이전 파일 이름 -->
+            <FilePattern>${logPath}/${filename}.%d{yyyy-MM-dd}_%i.err.log</FilePattern>
+
+            <!-- 파일 로그 출력 패턴 -->
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+
+            <Policies>
+                <!-- 하루 지나면 롤업 -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <!-- 롤업 용량 기준 -->
+                <SizeBasedTriggeringPolicy Size="3MB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="7" fileIndex="max" >
+                <Delete basePath = "logs" maxDepth = "1">
+                    <!-- 7일이 경과한 로그파일은 자동 삭제 -->
+                    <IfLastModified age = "7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+
+        </RollingFile>
+    </Appenders>
+
+
+    <Loggers>
+        <!-- 기본(디폴트) logger 설정-->
+        <Root level="INFO">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="SaveFile"/>
+            <AppenderRef ref="SaveErr" level="ERROR"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
